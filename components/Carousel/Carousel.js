@@ -28,10 +28,13 @@ class Carousel {
     this.images.forEach(img => img.classList.remove('active', 'left', 'right'));
 
     if (right) {
+      console.log('right end');
       this.images.forEach(img => img.classList.add('right'));
       const startImg = this.carousel.querySelector('.img[data-img="1"]');
+      console.log(startImg);
       startImg.classList.replace('right', 'active');
     } else {
+      console.log('left end');
       this.images.forEach(img => img.classList.add('left'));
       const endImg = this.carousel.querySelector('.img[data-img="4"]');
       endImg.classList.replace('left', 'active');
