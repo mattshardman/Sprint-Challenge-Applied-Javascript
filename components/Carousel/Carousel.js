@@ -17,9 +17,9 @@ class Carousel {
     const nextImg = this.carousel.querySelector(`.img[data-img="${Number(this.data) + num}"]`);
     if (nextImg) {
       if (right) {
-        current.classList.replace('active', 'right');
-      } else {
         current.classList.replace('active', 'left');
+      } else {
+        current.classList.replace('active', 'right');
       }
       nextImg.classList.remove('left', 'right');
       nextImg.classList.add('active');

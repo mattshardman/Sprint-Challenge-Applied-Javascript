@@ -306,6 +306,9 @@ body {
   height: 500px;
   z-index: 5;
 }
+.carousel .img {
+  transition: transform 1s;
+}
 .carousel .left {
   transform: translateX(-100%);
 }
