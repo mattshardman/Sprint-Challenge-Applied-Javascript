@@ -23,6 +23,18 @@ class Carousel {
       }
       nextImg.classList.remove('left', 'right');
       nextImg.classList.add('active');
+      return null;
+    }
+    this.images.forEach(img => img.classList.remove('active', 'left', 'right'));
+
+    if (right) {
+      this.images.forEach(img => img.classList.add('right'));
+      const startImg = this.carousel.querySelector('.img[data-img="1"]');
+      startImg.classList.replace('right', 'active');
+    } else {
+      this.images.forEach(img => img.classList.add('left'));
+      const endImg = this.carousel.querySelector('.img[data-img="4"]');
+      endImg.classList.replace('left', 'active');
     }
   }
 }
